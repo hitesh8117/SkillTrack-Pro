@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkillTrack Pro</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>SkillTrack Pro</h1>
+
+<div class="stats">
+
+<div class="card">
+<h3>Total Employees</h3>
+<p id="totalEmployees">0</p>
+</div>
+
+<div class="card">
+<h3>Average Score</h3>
+<p id="avgScore">0%</p>
+</div>
+
+<div class="card">
+<h3>Top Performer</h3>
+<p id="topPerformer">-</p>
+</div>
+
+<div class="card">
+<h3>Departments</h3>
+<p id="departments">0</p>
+</div>
+
+</div>
+
+<div class="form">
+
+<input id="name" placeholder="Employee Name">
+
+<input id="department" placeholder="Department">
+
+<input id="score" type="number" placeholder="Skill Score">
+
+<button onclick="addEmployee()">
+Add Employee
+</button>
+
+</div>
+
+<input
+id="search"
+placeholder="Search Employee..."
+onkeyup="renderEmployees()"
+>
+
+<div class="tableWrap">
+
+<table>
+
+<thead>
+<tr>
+<th>Name</th>
+<th>Department</th>
+<th>Score</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="employeeTable"></tbody>
+
+</table>
+
+</div>
+
+<div class="charts">
+
+<div class="chartCard">
+<canvas id="scoreChart"></canvas>
+</div>
+
+<div class="chartCard">
+<canvas id="deptChart"></canvas>
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
